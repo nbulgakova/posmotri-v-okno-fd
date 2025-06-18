@@ -19,7 +19,6 @@ html {
   font-size: 18px;
   background-color: #1b1919;
   width: 1200px;
-  max-height: 800px;
   align-items: center;
   justify-content: center;
 }
@@ -62,13 +61,11 @@ ol {
   align-items: flex-end;
   justify-content: center;
   gap: 30px;
-  height: 534px;
 }
 
 .result {
   align-self: flex-end;
   inline-size: 711px;
-  height: 456px;
   padding-top: 0px;
 }
 
@@ -89,7 +86,6 @@ ol {
 .search-form {
   display: flex;
   margin-top: 16px;
-  max-height: 54px;
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -117,7 +113,6 @@ ol {
   line-height: 100%;
   letter-spacing: 0;
   text-decoration: none;
-  /*opacity: 70%;*/
 }
 
 .search-form__label {
@@ -127,9 +122,9 @@ ol {
  cursor: pointer;
 }
 
-.search-form__label:hover {
-  text-decoration: underline;
-}
+.search-form__label:hover .search-form__label-text {
+   text-decoration: underline;
+}  
 
 .search-form__label:focus {
   outline: none;
@@ -167,8 +162,8 @@ ol {
   font-size: 18px;
   border-right: none;
   border-left: none;
-  border-top: 1px solid #FFFFFF;
-  border-bottom: 1px solid #FFFFFF;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
   width: 225px;
   height: 27px;
   appearance: none;
@@ -223,7 +218,7 @@ background-color: white;
   text-align: center;
   background-color: transparent;
   color: #FFFFFF;
-  border: 1px solid #FFFFFF;
+  border: 1px solid currentColor;
   cursor: pointer;
 }
 
@@ -258,7 +253,7 @@ background-color: white;
 
 .content__list-container {
   height: 298px;
-  overflow: scroll;
+  overflow: auto;
   overflow-x: auto;
   position: relative;
 }
@@ -272,7 +267,6 @@ background-color: white;
 
 .content__details {
   width: 100%;
-  height: 534px;
   align-self: flex-end;
   align-items: flex-end;
 }
@@ -326,7 +320,7 @@ background-color: white;
 }
 
 .content__video-card-title {
-font-family: Oswald;
+font-family: 'Oswald','Fira Sans Condensed', sans-serif;
 font-weight: 700;
 font-size: 30px;
 line-height: 30px;
@@ -340,7 +334,7 @@ white-space: nowrap;
 }
 
 .content__video-card-description {
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
@@ -348,21 +342,32 @@ white-space: nowrap;
   color: #FFFFFF;
   width: 196px;
   height: 17px;
-  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden; 
 }
 
 .title {
-  font-family: Oswald;
+  font-family: 'Oswald','Fira Sans Condensed', sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
-  letter-spacing: 0;
+  letter-spacing: 0px;
   text-transform: uppercase;
   margin-bottom: 26px;
   max-width: 259px;
-  max-height: 210px;
 }
 
 .content__accent {
   color: #545050;
+  font-family: 'Oswald','Fira Sans Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+  max-width: 259px;
 }
